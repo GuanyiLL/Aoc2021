@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SolutionProtocol {
-    var id: Int { get set }
+    func getID() -> Int
     var puzzle: [String] { get set }
     func part1() -> Int
     func part2() -> Int
@@ -17,6 +17,7 @@ protocol SolutionProtocol {
 
 extension SolutionProtocol {
     func loadPuzzle() throws -> [String]  {
+        let id = getID()
         let url = Bundle.main.url(forResource: "\(id)", withExtension: "")!
         let s = try String(contentsOf: url)
         return s.split(separator: "\n").map { String($0) }
@@ -33,9 +34,10 @@ extension SolutionProtocol {
 
 
 class Solution: SolutionProtocol {
+    func getID() -> Int { 0 }
+    
     
     var puzzle = [String]()
-    var id: Int = 0
     
     init() {
         puzzle = try! loadPuzzle()
