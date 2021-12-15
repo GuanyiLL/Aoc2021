@@ -7,5 +7,5 @@
 
 import Foundation
 
-let res = Day4().part1()
+let res = Day3().part2()
 print(res)
