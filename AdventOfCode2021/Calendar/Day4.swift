@@ -49,14 +49,22 @@ class Day4: Solution {
         return 0
     }
     
-    func mark(_ input: Int) -> (Int, Int) {
+    func mark(_ input: Int, _ returnFirst: Bool = true) -> (Int, Int) {
         for (idx, matrix) in datas.enumerated() {
+            if winSet[idx, default: false] { continue }
             for row in 0..<matrix.count {
                 for col in 0..<matrix[row].count {
                     if matrix[row][col].0 == input {
                         datas[idx][row][col].1 = true
                         if check(idx, row, col) {
-                            return (idx, input)
+                            if returnFirst {
+                                return (idx, input)
+                            } else {
+                                winSet[idx] = true
+                                if winSet.count == datas.count {
+                                    return (idx, input)
+                                }
+                            }
                         }
                     }
                 }
@@ -88,8 +96,21 @@ class Day4: Solution {
         return res
     }
     
+    var winSet = [Int:Bool]()
+    
     func part2() -> Int {
-        
+        for input in inputs {
+            let last = mark(input, false)
+            if last.0 != -1 {
+                let sum = datas[last.0]
+                    .flatMap{ $0 }
+                    .filter{ !$0.1 }
+                    .map{ $0.0 }
+                    .reduce(0, +)
+                return last.1 * sum
+            }
+            print(last)
+        }
         return 0
     }
 }
