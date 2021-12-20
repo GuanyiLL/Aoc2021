@@ -35,13 +35,8 @@ extension SolutionProtocol {
 
 class Solution: SolutionProtocol {
     func getID() -> Int { 0 }
-    
-    
     var puzzle = [String]()
-    
     init() {
         puzzle = try! loadPuzzle()
     }
-    
-
 }

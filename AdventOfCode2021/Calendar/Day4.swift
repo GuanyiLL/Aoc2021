@@ -38,7 +38,7 @@ class Day4: Solution {
         for input in inputs {
             let last = mark(input)
             if last.0 != -1 {
-                var sum = datas[last.0]
+                let sum = datas[last.0]
                     .flatMap{ $0 }
                     .filter{ !$0.1 }
                     .map{ $0.0 }
