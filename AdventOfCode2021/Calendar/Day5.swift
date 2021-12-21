@@ -17,9 +17,7 @@ class Day5 : Solution {
         var y: Int
     }
     
-    override func getID() -> Int {
-        return 5
-    }
+    override var id: Int { 5 }
     
     var maxOverlap = 2
     

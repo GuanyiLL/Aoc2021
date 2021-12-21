@@ -8,7 +8,7 @@
 import Foundation
 
 class Day3 : Solution {
-    override func getID() -> Int { 3 }
+    override var id: Int { 3 }
     
     func part1() -> Int {
         let datas = puzzle.map {

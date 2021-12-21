@@ -9,7 +9,7 @@ import Foundation
 
 
 class Day4 : Solution {
-    override func getID() -> Int { 4 }
+    override var id: Int { 4 }
     
     lazy var inputs: [Int] = {
         return puzzle[0].split(separator: ",").map{Int($0)!}

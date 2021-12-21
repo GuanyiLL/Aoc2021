@@ -9,7 +9,7 @@ import Foundation
 
 class Day1 : Solution {
     
-    override func getID() -> Int { 1 }
+    override var id: Int { 1 }
     
     func part1() -> Int {
         let datas = puzzle.compactMap{Int($0)}

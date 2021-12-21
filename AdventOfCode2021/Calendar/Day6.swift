@@ -8,9 +8,7 @@
 import Foundation
 
 class Day6 : Solution {
-    override func getID() -> Int {
-        return 6
-    }
+    override var id: Int { 6 }
     
     lazy var inputs = {
         puzzle[0].split(separator: ",").compactMap{ Int($0) }

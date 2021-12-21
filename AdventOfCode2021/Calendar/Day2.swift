@@ -8,7 +8,7 @@
 import Foundation
 
 class Day2 : Solution {
-    override func getID() -> Int { 2 }
+    override var id: Int { 2 }
     
     var depth = 0
     var horizontal = 0
