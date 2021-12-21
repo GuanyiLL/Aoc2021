@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day2: Solution {
+class Day2 : Solution {
     override func getID() -> Int { 2 }
     
     var depth = 0

@@ -7,7 +7,7 @@
 
 import Foundation
 
-let current = Day5()
+let current = Day6()
 
 let res1 = current.part1()
 print(res1)

@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Day4: Solution {
+class Day4 : Solution {
     override func getID() -> Int { 4 }
     
     lazy var inputs: [Int] = {

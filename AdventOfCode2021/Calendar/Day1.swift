@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day1: Solution {
+class Day1 : Solution {
     
     override func getID() -> Int { 1 }
     

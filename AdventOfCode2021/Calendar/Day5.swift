@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day5: Solution {
+class Day5 : Solution {
     
     struct Point: Hashable, CustomStringConvertible {
         var description: String {
