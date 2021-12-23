@@ -14,6 +14,7 @@
 		932CE5962771EAE500DF0EF4 /* 6 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 932CE5952771EADB00DF0EF4 /* 6 */; };
 		932CE598277353F000DF0EF4 /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CE597277353F000DF0EF4 /* Day7.swift */; };
 		932CE59B2773557A00DF0EF4 /* 7 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 932CE5992773555400DF0EF4 /* 7 */; };
+		932CE5C62774A3DF00DF0EF4 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CE5C52774A3DF00DF0EF4 /* Day8.swift */; };
 		933F660A27675EC400425532 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933F660927675EC400425532 /* Day2.swift */; };
 		937A98542765D75A00DC8F08 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A98532765D75A00DC8F08 /* main.swift */; };
 		937A985D2765D77100DC8F08 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A985A2765D77100DC8F08 /* Day1.swift */; };
@@ -54,6 +55,8 @@
 		932CE5952771EADB00DF0EF4 /* 6 */ = {isa = PBXFileReference; lastKnownFileType = text; path = 6; sourceTree = "<group>"; };
 		932CE597277353F000DF0EF4 /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		932CE5992773555400DF0EF4 /* 7 */ = {isa = PBXFileReference; lastKnownFileType = text; path = 7; sourceTree = "<group>"; };
+		932CE5C52774A3DF00DF0EF4 /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
+		932CE5C72774A3EB00DF0EF4 /* 8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = 8; sourceTree = "<group>"; };
 		933F660927675EC400425532 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		937A98502765D75A00DC8F08 /* AdventOfCode2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2021; sourceTree = BUILT_PRODUCTS_DIR; };
 		937A98532765D75A00DC8F08 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 				932CE58D2770A16C00DF0EF4 /* Day5.swift */,
 				932CE5932771EACA00DF0EF4 /* Day6.swift */,
 				932CE597277353F000DF0EF4 /* Day7.swift */,
+				932CE5C52774A3DF00DF0EF4 /* Day8.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -130,6 +134,7 @@
 				932CE58F2770A17C00DF0EF4 /* 5 */,
 				932CE5952771EADB00DF0EF4 /* 6 */,
 				932CE5992773555400DF0EF4 /* 7 */,
+				932CE5C72774A3EB00DF0EF4 /* 8 */,
 			);
 			path = Puzzle;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				937A985D2765D77100DC8F08 /* Day1.swift in Sources */,
+				932CE5C62774A3DF00DF0EF4 /* Day8.swift in Sources */,
 				932CE5942771EACA00DF0EF4 /* Day6.swift in Sources */,
 				932CE58E2770A16C00DF0EF4 /* Day5.swift in Sources */,
 				93D5A9692768D15D004473E1 /* Day4.swift in Sources */,
