@@ -32,56 +32,89 @@ class Day8: Solution {
     override var id: Int { 0 }
     
     lazy var inputs:[[String]] = {
-        let inputs = puzzle.map {
-            $0.split(separator: " ").map{ String($0) }
-        }
+        let inputs = puzzle
+            .map {
+                $0
+                    .split(separator: "|")
+                    .map{ $0.split(separator: " ")
+                    .map{ String($0) }
+                    }
+                
+            }
+            .flatMap{ $0 }
         return inputs
     }()
     
     func part1() -> Int {
-//        var state:[Set<String>] = [["c","f"],
-//                                   ["b","c","d","f"],
-//                                   ["a","c","f"],
-//                                   ["a","b","c","d","e","f","g"]]
-        
-        var state:[Set<String>] = [["c","f"],
-                                   ["b","c","d","f"],
-                                   ["a","c","f"],
-                                   ["a","b","c","d","e","f","g"]]
-        
-        
-        var data = [String]()
-        for idx in 0..<inputs.count {
-            if idx % 2 != 0 {
-                data.append(contentsOf: inputs[idx])
-            }
-        }
-        var count = 0
-   
-        for digit in data {
-
-            var tmpCount = 0
-            for digitSet in state {
-                
-                let tmp = Set<String>(digit.map{ String($0) })
-                
-                print("tmp: \(tmp), digitSet: \(digitSet)")
-                
-                if tmp.isSubset(of: digitSet) {
-                    tmpCount += 1
+        var res = 0
+        for (i, outputDigits) in inputs.enumerated() where i % 2 != 0 {
+            for digit in outputDigits {
+                switch digit.count {
+                case 2: fallthrough
+                case 4: fallthrough
+                case 3: fallthrough
+                case 7:
+                    res += 1
+                default: break
                 }
             }
-            
-            if tmpCount == 1 {
-                count += 1
-                tmpCount = 0
-            }
         }
-
-        return count
+        return res
     }
     
+    /*
+     dddd
+    e    a
+    e    a
+     ffff
+    g    b
+    g    b
+     cccc
+     */
     func part2() -> Int {
-        return 0
+        var res = 0
+        var digits = ["acedgfb": 8,
+                      "cdfbe": 5,
+                      "gcdfa": 2,
+                      "fbcad": 3,
+                      "dab": 7,
+                      "cefabd": 9,
+                      "cdfgeb": 6,
+                      "eafb": 4,
+                      "cagedb": 0,
+                      "ab": 1]
+        let digits2 = Dictionary(uniqueKeysWithValues: digits.lazy.map{ (Set($0), $1) })
+        let ordered = digits.map { $0.key }.sorted()
+        
+        for (i, outputDigits) in inputs.enumerated() where i % 2 != 0 {
+            var number = 0
+            
+            for digit in outputDigits {
+                var current: Int = -1
+                switch digit.count {
+                case 2: fallthrough
+                case 4: fallthrough
+                case 3: fallthrough
+                case 7:
+                    current = digit.count
+                default:
+                    if let n = digits2[Set(digit)] {
+                        current = n
+                    } else {
+                        for item in ordered {
+                            if item.count == digit.count {
+                                current = digits2[Set(item)]!
+                            }
+                        }
+                    }
+                }
+                print(digit)
+                number = number * 10 + current
+            }
+            print(number)
+            res += number
+        }
+        
+        return res
     }
 }
